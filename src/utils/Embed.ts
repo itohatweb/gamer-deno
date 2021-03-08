@@ -124,7 +124,7 @@ export class Embed {
     return this.addField("\u200B", "\u200B", inline);
   }
 
-  attachFile(file: unknown, name: string) {
+  attachFile(file: Blob, name: string) {
     this.embedFile = {
       blob: file,
       name,
@@ -171,6 +171,6 @@ export class Embed {
 }
 
 export interface EmbedFile {
-  blob: unknown;
+  blob: Blob;
   name: string;
 }
